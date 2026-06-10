@@ -1,8 +1,11 @@
+import { motion } from "motion/react";
 import styles from "./ProductBoundarySection.module.css";
 import { cx } from "../../lib/utils";
 import { Section } from "../primitives/Section";
 import { Reveal } from "../primitives/Reveal";
+import { staggerContainer, staggerItem, VIEWPORT } from "../../lib/animation";
 import { productBoundary } from "../../content/siteContent";
+import { principlesContent } from "../../content/principles";
 import type { BoundaryColumn } from "../../content/types";
 
 function Column({
@@ -37,6 +40,25 @@ export function ProductBoundarySection() {
           <Column column={productBoundary.isNot} variant="isNot" />
         </div>
       </Reveal>
+
+      <motion.ul
+        className={styles.principles}
+        variants={staggerContainer(0.06)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT}
+        aria-label="Principles"
+      >
+        {principlesContent.principles.map((principle) => (
+          <motion.li
+            key={principle.text}
+            className={styles.principle}
+            variants={staggerItem}
+          >
+            {principle.text}
+          </motion.li>
+        ))}
+      </motion.ul>
     </Section>
   );
 }

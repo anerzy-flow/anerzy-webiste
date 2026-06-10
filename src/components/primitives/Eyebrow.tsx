@@ -7,7 +7,7 @@ interface EyebrowProps {
   className?: string;
 }
 
-/** Small uppercase mono label that sits above section headlines. */
+/** Small sentence-case label that sits above section headlines. */
 export function Eyebrow({ children, className }: EyebrowProps) {
   return <p className={cx(styles.eyebrow, className)}>{children}</p>;
 }

@@ -4,7 +4,11 @@ import { MotionConfig } from "motion/react";
 
 // Self-hosted fonts (no CDN dependency). Explicit `.css` paths so the strict
 // side-effect import check can resolve them via Vite's ambient css module.
-import "@fontsource-variable/inter/index.css";
+// Fraunces carries headlines (editorial, human); Source Sans 3 carries body
+// text; IBM Plex Mono is reserved for data figures inside the demo.
+import "@fontsource-variable/fraunces/opsz.css";
+import "@fontsource-variable/fraunces/opsz-italic.css";
+import "@fontsource-variable/source-sans-3/index.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/500.css";
 

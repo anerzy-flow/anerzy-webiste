@@ -11,11 +11,11 @@ interface UseCaseDiagramProps {
   stages: UseCaseStage[];
 }
 
-/** Five-stage planning pipeline. Stages fade in on scroll; the final scenario
+/** Staged planning pipeline. Stages fade in on scroll; the final scenario
  * view resolves into green / amber / red feasibility indicators. */
 export function UseCaseDiagram({ stages }: UseCaseDiagramProps) {
   return (
-    <div className={styles.flow} role="group" aria-label="Amsterdam neighborhood heat-transition pipeline">
+    <div className={styles.flow} role="group" aria-label="Neighborhood heat-transition pipeline">
       {stages.map((stage, i) => {
         const isFinal = i === stages.length - 1;
         return (

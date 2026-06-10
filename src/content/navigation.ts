@@ -5,9 +5,7 @@ import type { NavItem } from "./types";
  * /technology, /about ...), swap these hrefs for routes. */
 export const navItems: NavItem[] = [
   { label: "Thesis", href: "#thesis" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Amsterdam example", href: "#amsterdam" },
+  { label: "Example", href: "#example" },
   { label: "Questions", href: "#questions" },
-  { label: "Principles", href: "#principles" },
   { label: "Contact", href: "#contact" },
 ];

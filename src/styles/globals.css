@@ -34,15 +34,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings inherit color; sizes/weights are applied per component via tokens. */
+/* Headings are set in the serif — editorial and institutional, not SaaS.
+ * Sizes are applied per component via tokens. */
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-serif);
   font-weight: var(--weight-semibold);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-snug);
   letter-spacing: var(--tracking-tight);
   text-wrap: balance;
+  font-variation-settings: "opsz" 72, "SOFT" 0, "WONK" 0;
+}
+
+h3,
+h4 {
+  font-variation-settings: "opsz" 28, "SOFT" 0, "WONK" 0;
 }
 
 p {

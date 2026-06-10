@@ -19,6 +19,21 @@ export function CTASection() {
           <p className={styles.secondary}>{cta.secondaryText}</p>
         </div>
       </Reveal>
+
+      <Reveal delay={0.08}>
+        <div className={styles.whoWeAre}>
+          <h3 className={styles.whoTitle}>{cta.whoWeAre.title}</h3>
+          <div className={styles.people}>
+            {cta.whoWeAre.people.map((person) => (
+              <div key={person.name} className={styles.person}>
+                <p className={styles.personName}>{person.name}</p>
+                <p className={styles.personLine}>{person.line}</p>
+              </div>
+            ))}
+          </div>
+          <p className={styles.whoNote}>{cta.whoWeAre.note}</p>
+        </div>
+      </Reveal>
     </Section>
   );
 }

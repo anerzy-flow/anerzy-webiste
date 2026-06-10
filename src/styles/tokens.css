@@ -54,8 +54,12 @@
   --diagram-line-width: 1.5;
 
   /* ---- Typography: families ---- */
-  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Fraunces (serif) carries headlines — editorial and human, not SaaS.
+   * Source Sans 3 carries body text. Mono is reserved for data figures. */
+  --font-serif: "Fraunces Variable", "Fraunces", Georgia, "Times New Roman",
+    serif;
+  --font-sans: "Source Sans 3 Variable", "Source Sans 3", system-ui,
+    -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo,
     Consolas, monospace;
 
@@ -79,9 +83,11 @@
   --leading-snug: 1.25;
   --leading-normal: 1.6;
 
-  --tracking-tight: -0.02em;
+  /* Serif headlines want near-zero tracking; tight negative tracking is a
+   * grotesque-sans habit and makes Fraunces look cramped. */
+  --tracking-tight: -0.005em;
   --tracking-normal: 0;
-  --tracking-wide: 0.12em; /* eyebrows / mono labels */
+  --tracking-wide: 0.12em; /* mono data labels only */
 
   /* ---- Spacing scale ---- */
   --space-3xs: 0.25rem;
@@ -109,9 +115,9 @@
   /* ---- Borders ---- */
   --border-hairline: 1px solid var(--color-border);
 
-  /* ---- Shadows (restrained) ---- */
+  /* ---- Shadows (nearly flat — paper, not glass) ---- */
   --shadow-sm: 0 1px 2px rgba(18, 53, 95, 0.04);
-  --shadow-md: 0 6px 24px -12px rgba(18, 53, 95, 0.18);
+  --shadow-md: 0 2px 8px -4px rgba(18, 53, 95, 0.1);
 
   /* ---- Motion ---- */
   --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);

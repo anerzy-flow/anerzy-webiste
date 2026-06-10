@@ -10,8 +10,20 @@
 
 .headline {
   font-size: var(--text-display);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-tight);
+  line-height: 1.08;
+}
+
+.digitalTwin {
+  margin-top: var(--space-sm);
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.45rem);
+  font-weight: var(--weight-medium);
+  font-style: italic;
+  color: var(--color-accent);
+  line-height: var(--leading-snug);
+  font-variation-settings: "opsz" 28;
 }
 
 .subheadline {

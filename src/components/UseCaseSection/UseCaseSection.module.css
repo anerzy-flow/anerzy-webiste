@@ -26,25 +26,26 @@
   margin-top: var(--space-md);
 }
 
+/* Left-rule pull quote — editorial emphasis without a colored box. */
 .coreQuestion {
-  padding: var(--space-md);
-  background: var(--color-cobalt);
-  color: var(--color-porcelain);
-  border-radius: var(--radius-md);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--color-accent);
 }
 
 .coreLabel {
-  font-family: var(--font-mono);
-  font-size: var(--text-eyebrow);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-air);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
   margin-bottom: var(--space-2xs);
 }
 
 .coreText {
-  font-size: var(--text-body);
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-medium);
   line-height: var(--leading-snug);
+  color: var(--color-text);
+  font-variation-settings: "opsz" 28;
 }
 
 .why {

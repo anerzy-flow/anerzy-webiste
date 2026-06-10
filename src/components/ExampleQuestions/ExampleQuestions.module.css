@@ -3,30 +3,21 @@
   max-width: 22ch;
 }
 
+/* Rule-separated rows, not boxed cards — reads like a printed Q&A column. */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-md);
+  display: block;
+  border-bottom: var(--border-hairline);
 }
 
-/* ---- card (renders as a button for full keyboard/touch support) ---- */
+/* ---- row (renders as a button for full keyboard/touch support) ---- */
 .card {
   display: block;
   width: 100%;
   text-align: left;
-  padding: var(--space-md);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition:
-    border-color var(--duration-fast) var(--ease-standard),
-    box-shadow var(--duration-fast) var(--ease-standard);
-}
-
-.card:hover,
-.cardOpen {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-sm);
+  padding-block: var(--space-md);
+  border-top: var(--border-hairline);
+  border-radius: 0;
+  transition: color var(--duration-fast) var(--ease-standard);
 }
 
 .cardHead {
@@ -37,10 +28,18 @@
 }
 
 .question {
+  font-family: var(--font-serif);
   font-size: var(--text-h3);
   font-weight: var(--weight-medium);
   line-height: var(--leading-snug);
   color: var(--color-text);
+  font-variation-settings: "opsz" 28;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.card:hover .question,
+.cardOpen .question {
+  color: var(--color-accent);
 }
 
 /* plus / minus toggle affordance */
@@ -95,10 +94,8 @@
 
 .outputLabel {
   display: block;
-  font-family: var(--font-mono);
-  font-size: var(--text-eyebrow);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
   color: var(--color-muted);
 }
 
@@ -106,7 +103,7 @@
   display: block;
   margin-top: var(--space-3xs);
   color: var(--color-accent);
-  font-size: var(--text-small);
+  max-width: 56ch;
 }
 
 @media (prefers-reduced-motion: reduce) {

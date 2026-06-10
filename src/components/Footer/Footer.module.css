@@ -15,8 +15,9 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2xs);
+  font-family: var(--font-serif);
   font-weight: var(--weight-semibold);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .mark {
@@ -51,8 +52,8 @@
 }
 
 .contactLink {
-  font-family: var(--font-mono);
   font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
   color: var(--color-accent);
   border-bottom: 1px solid transparent;
 }

@@ -2,12 +2,12 @@ import styles from "./UseCaseSection.module.css";
 import { Section } from "../primitives/Section";
 import { Reveal } from "../primitives/Reveal";
 import { UseCaseDiagram } from "../diagrams/UseCaseDiagram";
-import { amsterdamUseCase } from "../../content/useCases";
+import { neighborhoodUseCase } from "../../content/useCases";
 
 export function UseCaseSection() {
-  const uc = amsterdamUseCase;
+  const uc = neighborhoodUseCase;
   return (
-    <Section id="amsterdam" eyebrow={uc.eyebrow} tone="surface">
+    <Section id="example" eyebrow={uc.eyebrow} tone="surface">
       <Reveal>
         <h2 className={styles.headline}>{uc.headline}</h2>
       </Reveal>

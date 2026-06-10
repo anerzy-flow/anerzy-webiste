@@ -6,7 +6,6 @@ import type {
   ProductBoundaryContent,
   SiteMeta,
   ThesisContent,
-  WorkflowContent,
 } from "./types";
 
 /* ----------------------------------------------------------------------------
@@ -16,15 +15,15 @@ import type {
  * -------------------------------------------------------------------------- */
 export const meta: SiteMeta = {
   brand: "Aenerzy",
-  tagline: "Orchestrating the tools behind local energy decisions.",
+  tagline: "Orchestrating the tools behind your energy decisions.",
   contactEmail: "hello@aenerzy.com",
   contactSubject: "Aenerzy — starting a conversation",
 };
 
 export const hero: HeroContent = {
-  headline: "Orchestrating the tools behind local energy decisions.",
+  headline: "Orchestrating the tools behind your energy decisions.",
   subheadline:
-    "Aenerzy is exploring how municipalities and energy hubs can connect fragmented models, data, and planning workflows into clearer scenario decisions.",
+    "Ask a planning question in your own words. Aenerzy connects the right models and data, runs the scenario, and returns an answer you can act on.",
   primaryCta: "Start a conversation",
   secondaryCta: { label: "Explore the thesis", href: "#thesis" },
 };
@@ -35,15 +34,15 @@ export const problem: ProblemContent = {
   columns: [
     {
       title: "Models are isolated",
-      text: "Heat, electricity, mobility, and flexibility tools often answer separate questions, even when the decisions depend on each other.",
+      text: "Heat, grid, and flexibility tools answer separate questions — even when the decision depends on all of them.",
     },
     {
       title: "Data moves manually",
-      text: "Teams still rely on spreadsheets, exports, assumptions, and one-off workflows to compare scenarios.",
+      text: "Spreadsheets, exports, and one-off workflows still carry the data between tools.",
     },
     {
       title: "Decisions arrive late",
-      text: "Grid, spatial, cost, or permit constraints are often discovered after plans have already gained momentum.",
+      text: "Grid, spatial, and permit constraints surface after plans have gained momentum.",
     },
   ],
 };
@@ -51,36 +50,10 @@ export const problem: ProblemContent = {
 export const thesis: ThesisContent = {
   eyebrow: "Our thesis",
   headline: "Our thesis",
-  main: "The next step in energy planning is not another standalone model. It is an orchestration layer that helps existing models, datasets, and experts work together.",
+  main: "The next step in energy planning is not another standalone model. It is an orchestration layer that makes existing models, datasets, and experts work together.",
   supporting:
-    "Aenerzy is exploring this layer: a way to connect trusted tools, guide users through the right questions, and produce scenario outputs that are easier to compare and explain.",
+    "Aenerzy connects trusted tools, guides users to the right questions, and produces scenario outputs that are easy to compare and explain.",
   smallLine: "Connect existing tools. Test scenarios. Explain trade-offs.",
-};
-
-export const workflow: WorkflowContent = {
-  headline: "What Aenerzy could become",
-  steps: [
-    {
-      index: "01",
-      title: "Connect",
-      text: "Link existing models, datasets, APIs, spreadsheets, and planning tools.",
-    },
-    {
-      index: "02",
-      title: "Orchestrate",
-      text: "Coordinate model inputs, assumptions, data flows, and dependencies.",
-    },
-    {
-      index: "03",
-      title: "Simulate",
-      text: "Run scenario questions across heat, grid, space, cost, and flexibility.",
-    },
-    {
-      index: "04",
-      title: "Explain",
-      text: "Return outputs that planners, experts, and decision-makers can understand.",
-    },
-  ],
 };
 
 export const productBoundary: ProductBoundaryContent = {
@@ -88,21 +61,17 @@ export const productBoundary: ProductBoundaryContent = {
   is: {
     title: "This is",
     bullets: [
-      "An orchestration concept for energy digital twin tools.",
-      "A way to connect existing models and datasets.",
+      "An orchestration layer for energy digital twin tools.",
       "A guided scenario workflow for local energy planning.",
-      "A bridge between experts and non-expert decision-makers.",
-      "A privacy-aware, federated approach where data can stay with its owner.",
+      "A privacy-aware, federated approach — data stays with its owner.",
     ],
   },
   isNot: {
     title: "This is not",
     bullets: [
       "Not a custom modeling consultancy.",
-      "Not just another dashboard.",
-      "Not a replacement for every digital twin tool.",
-      "Not a claim that one model can solve the whole energy transition.",
-      "Not a finished platform yet.",
+      "Not another dashboard.",
+      "Not a claim that one model solves the energy transition.",
     ],
   },
 };
@@ -112,7 +81,7 @@ export const audience: AudienceContent = {
   blocks: [
     {
       title: "Municipalities",
-      text: "Planning heat, electricity, mobility, housing, and public space under real constraints.",
+      text: "Planning heat, electricity, mobility, and public space under real constraints.",
     },
     {
       title: "Energy hubs",
@@ -120,7 +89,7 @@ export const audience: AudienceContent = {
     },
     {
       title: "Business parks",
-      text: "Exploring electrification, charging, grid limits, and operational flexibility.",
+      text: "Exploring electrification, charging, grid limits, and flexibility.",
     },
     {
       title: "Grid and heat experts",
@@ -128,17 +97,32 @@ export const audience: AudienceContent = {
     },
     {
       title: "Consultants and planners",
-      text: "Turning technical analysis into choices that organizations can act on.",
+      text: "Turning technical analysis into choices organizations can act on.",
     },
   ],
 };
 
 export const cta: CtaContent = {
   headline: "If this problem sounds familiar, we would like to learn from you.",
-  text: "We are shaping Aenerzy by speaking with people who work on local energy planning, grid congestion, heat transition, energy hubs, and business electrification.",
+  text: "We are shaping Aenerzy with people who work on local energy planning, grid congestion, heat transition, and electrification.",
   primaryCta: "Start a conversation",
   secondaryText:
-    "No pitch deck required. We are interested in workflows, bottlenecks, and real planning questions.",
+    "No pitch deck required. We are interested in real workflows and real planning questions.",
+  // PLACEHOLDERS — replace names and lines with the real people.
+  whoWeAre: {
+    title: "Who we are",
+    people: [
+      {
+        name: "[Founder name]",
+        line: "[One line: background and why local energy planning matters to you.]",
+      },
+      {
+        name: "[Co-founder name]",
+        line: "[One line: background — e.g. simulation tooling, grid modeling, software.]",
+      },
+    ],
+    note: "Based in the Netherlands, working in conversation with the people who plan the energy transition.",
+  },
 };
 
 /** Convenience: the mailto href used by every "Start a conversation" CTA. */

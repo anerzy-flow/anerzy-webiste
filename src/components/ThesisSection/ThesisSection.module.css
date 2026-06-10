@@ -27,11 +27,13 @@
 
 .smallLine {
   margin-top: var(--space-lg);
-  font-family: var(--font-mono);
-  font-size: var(--text-small);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-body);
   color: var(--color-accent);
   padding-top: var(--space-md);
   border-top: var(--border-hairline);
+  font-variation-settings: "opsz" 18;
 }
 
 @media (max-width: 860px) {

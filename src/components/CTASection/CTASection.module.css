@@ -33,3 +33,50 @@ a.button:hover {
   font-size: var(--text-small);
   color: rgba(248, 245, 239, 0.6);
 }
+
+/* ---- Who we are — real people, the strongest trust signal on the page ---- */
+.whoWeAre {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(248, 245, 239, 0.18);
+  max-width: 42rem;
+}
+
+.whoTitle {
+  font-size: var(--text-h3);
+  color: var(--color-porcelain);
+}
+
+.people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.personName {
+  font-weight: var(--weight-semibold);
+  color: var(--color-porcelain);
+}
+
+.personLine {
+  margin-top: var(--space-3xs);
+  font-size: var(--text-small);
+  color: rgba(248, 245, 239, 0.72);
+}
+
+.whoNote {
+  margin-top: var(--space-md);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-body);
+  color: rgba(248, 245, 239, 0.78);
+  font-variation-settings: "opsz" 18;
+}
+
+@media (max-width: 640px) {
+  .people {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

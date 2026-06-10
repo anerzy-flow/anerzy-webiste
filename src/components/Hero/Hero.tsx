@@ -32,6 +32,9 @@ export function Hero() {
           <motion.h1 className={styles.headline} variants={introItem}>
             {hero.headline}
           </motion.h1>
+          <motion.p className={styles.digitalTwin} variants={introItem}>
+            The conductor for digital twin technologies.
+          </motion.p>
           <motion.p className={styles.subheadline} variants={introItem}>
             {hero.subheadline}
           </motion.p>

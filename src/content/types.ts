@@ -42,17 +42,6 @@ export interface ThesisContent {
   smallLine: string;
 }
 
-export interface WorkflowStep {
-  index: string;
-  title: string;
-  text: string;
-}
-
-export interface WorkflowContent {
-  headline: string;
-  steps: WorkflowStep[];
-}
-
 export interface BoundaryColumn {
   title: string;
   bullets: string[];
@@ -74,11 +63,23 @@ export interface AudienceContent {
   blocks: AudienceBlock[];
 }
 
+export interface Person {
+  name: string;
+  /** One human line: background, role, or why they care. */
+  line: string;
+}
+
 export interface CtaContent {
   headline: string;
   text: string;
   primaryCta: string;
   secondaryText: string;
+  /** Short "who we are" block — real people behind the project. */
+  whoWeAre: {
+    title: string;
+    people: Person[];
+    note: string;
+  };
 }
 
 export interface NavItem {

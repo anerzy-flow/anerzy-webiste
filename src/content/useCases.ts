@@ -1,69 +1,35 @@
 import type { ExampleQuestionsContent, UseCaseContent } from "./types";
 
-export const amsterdamUseCase: UseCaseContent = {
-  eyebrow: "Amsterdam example",
-  headline: "Example question: Amsterdam neighborhood heat transition",
+export const neighborhoodUseCase: UseCaseContent = {
+  eyebrow: "Worked example",
+  headline: "Example: a neighborhood heat transition",
   useCaseTitle:
-    "Can an Amsterdam neighborhood move away from gas without creating new grid, heat, or street-space bottlenecks?",
-  copy: "A municipality may need to compare district heating, individual heat pumps, hybrid heat pumps, and phased transition paths. Each option affects electricity demand, heat infrastructure, public-space disruption, cost, and resident impact.",
+    "Can a neighborhood move away from gas without creating new grid, heat, or street-space bottlenecks?",
+  copy: "A gemeente has to weigh district heating, heat pumps, and phased paths — each with its own grid, space, cost, and resident impact.",
   coreQuestion:
-    "For a selected Amsterdam neighborhood, what is the best transition path considering grid capacity, heat demand, public-space constraints, cost, timing, and resident vulnerability?",
+    "What is the best transition path for this neighborhood, given grid capacity, heat demand, space, cost, and timing?",
   whyMultipleTools:
-    "No single model can answer this alone. The question crosses heat planning, electricity capacity, GIS, building data, social indicators, and permit timing.",
+    "The question crosses heat planning, grid capacity, spatial data, and permit timing — no single model answers it alone.",
   stages: [
     {
       index: "01",
-      title: "Neighborhood inputs",
-      items: [
-        "Building type",
-        "Energy labels",
-        "Heat demand",
-        "Ownership",
-        "Income / vulnerability indicators",
-      ],
+      title: "Inputs",
+      items: ["Building stock", "Energy labels", "Heat demand", "Ownership"],
     },
     {
       index: "02",
-      title: "Heat model",
+      title: "Models",
       items: [
-        "District heating",
-        "Individual heat pumps",
-        "Hybrid heat pumps",
-        "Thermal storage",
-        "Source mix",
+        "Heat: district vs. heat pumps",
+        "Grid: peak load + capacity",
+        "Spatial: street works + permits",
+        "Cost + phasing",
       ],
     },
     {
       index: "03",
-      title: "Grid model",
-      items: [
-        "Peak load",
-        "Transformer pressure",
-        "Cable capacity",
-        "Reinforcement need",
-      ],
-    },
-    {
-      index: "04",
-      title: "Spatial and planning layer",
-      items: [
-        "Underground space",
-        "Street works",
-        "Station locations",
-        "Permit timing",
-        "Coordination with other projects",
-      ],
-    },
-    {
-      index: "05",
-      title: "Aenerzy scenario view",
-      items: [
-        "Feasibility score",
-        "Bottlenecks",
-        "Preferred transition path",
-        "Phasing recommendation",
-        "Decision note",
-      ],
+      title: "Scenario view",
+      items: ["Preferred path", "Bottlenecks", "Phasing recommendation"],
       outputs: [
         { label: "Heat strategy feasible", status: "feasible" },
         { label: "Grid reinforcement needed", status: "constraint" },
@@ -72,7 +38,7 @@ export const amsterdamUseCase: UseCaseContent = {
     },
   ],
   diagramCaption:
-    "This is not a final product workflow. It is an example of the kind of planning question Aenerzy is exploring with municipalities and local energy stakeholders.",
+    "An example of the planning questions Aenerzy is exploring with municipalities and local energy stakeholders — not a final product workflow.",
 };
 
 export const exampleQuestions: ExampleQuestionsContent = {
@@ -81,24 +47,15 @@ export const exampleQuestions: ExampleQuestionsContent = {
     {
       question:
         "Can this neighborhood electrify without immediate grid reinforcement?",
-      output: "Capacity check, flexibility options, and phasing recommendation.",
-    },
-    {
-      question: "What happens if heat-pump adoption doubles?",
-      output: "Grid impact, heat-demand shift, and investment pressure.",
+      output: "Capacity check, flexibility options, phasing recommendation.",
     },
     {
       question: "Which heat strategy fits this district best?",
-      output:
-        "Comparison of district heating, heat pumps, storage, cost, and CO2.",
+      output: "District heating vs. heat pumps, with cost and CO2 compared.",
     },
     {
       question: "Where will the first bottleneck appear?",
       output: "Grid, space, permit, cost, or timing constraint.",
-    },
-    {
-      question: "Which tools and data should be used for this decision?",
-      output: "Guided workflow for non-expert users.",
     },
   ],
 };
