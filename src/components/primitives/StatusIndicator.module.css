@@ -1,0 +1,44 @@
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-small);
+  line-height: var(--leading-snug);
+}
+
+.dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.label {
+  color: var(--color-text);
+}
+
+.feasible {
+  --ring: rgba(34, 160, 107, 0.16);
+}
+.feasible .dot {
+  background: var(--color-feasible);
+}
+
+.constraint {
+  --ring: rgba(217, 148, 0, 0.16);
+}
+.constraint .dot {
+  background: var(--color-constraint);
+}
+
+.blocked {
+  --ring: rgba(214, 69, 69, 0.16);
+}
+.blocked .dot {
+  background: var(--color-blocked);
+}

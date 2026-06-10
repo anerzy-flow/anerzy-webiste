@@ -1,0 +1,73 @@
+.headline {
+  font-size: var(--text-h1);
+  max-width: 22ch;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.useCaseTitle {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  line-height: var(--leading-snug);
+}
+
+.copy {
+  margin-top: var(--space-md);
+  color: var(--color-muted);
+}
+
+.aside > * + * {
+  margin-top: var(--space-md);
+}
+
+.coreQuestion {
+  padding: var(--space-md);
+  background: var(--color-cobalt);
+  color: var(--color-porcelain);
+  border-radius: var(--radius-md);
+}
+
+.coreLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-air);
+  margin-bottom: var(--space-2xs);
+}
+
+.coreText {
+  font-size: var(--text-body);
+  line-height: var(--leading-snug);
+}
+
+.why {
+  color: var(--color-muted);
+  font-size: var(--text-small);
+}
+
+.diagram {
+  margin-top: var(--space-2xl);
+}
+
+.caption {
+  margin-top: var(--space-xl);
+  max-width: 62ch;
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--color-border);
+}
+
+@media (max-width: 860px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

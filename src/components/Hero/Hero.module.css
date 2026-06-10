@@ -1,0 +1,39 @@
+.hero {
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: var(--space-section);
+  scroll-margin-top: var(--header-height);
+}
+
+.intro {
+  max-width: 46rem;
+}
+
+.headline {
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.subheadline {
+  margin-top: var(--space-md);
+  font-size: var(--text-lead);
+  color: var(--color-muted);
+  max-width: 38rem;
+}
+
+.actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.diagram {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: var(--color-surface);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}

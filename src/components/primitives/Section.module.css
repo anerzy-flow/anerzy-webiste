@@ -1,0 +1,29 @@
+.section {
+  padding-block: var(--space-section);
+  /* Offset anchor scrolling so the sticky header doesn't cover the heading. */
+  scroll-margin-top: var(--header-height);
+  border-top: var(--border-hairline);
+}
+
+.section > * + * {
+  margin-top: var(--space-lg);
+}
+
+/* ---- tones ---- */
+.default {
+  background: var(--color-bg);
+}
+
+.surface {
+  background: var(--color-surface);
+}
+
+.dark {
+  background: var(--color-cobalt);
+  color: var(--color-porcelain);
+  border-top-color: var(--color-cobalt);
+}
+
+.dark :global(.skip-link) {
+  color: inherit;
+}

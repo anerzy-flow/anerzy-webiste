@@ -1,0 +1,8 @@
+.headline {
+  font-size: var(--text-h1);
+  max-width: 20ch;
+}
+
+.diagram {
+  margin-top: var(--space-2xl);
+}

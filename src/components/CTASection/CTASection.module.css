@@ -1,0 +1,35 @@
+.inner {
+  max-width: 42rem;
+}
+
+.headline {
+  font-size: var(--text-h1);
+  color: var(--color-porcelain);
+}
+
+.text {
+  margin-top: var(--space-md);
+  color: rgba(248, 245, 239, 0.78);
+  font-size: var(--text-lead);
+}
+
+.action {
+  margin-top: var(--space-lg);
+}
+
+/* On the dark section, use a porcelain button so it reads against cobalt.
+ * The `a` type prefix raises specificity so it wins over Button's variant. */
+a.button {
+  background: var(--color-porcelain);
+  color: var(--color-cobalt);
+}
+
+a.button:hover {
+  background: #ffffff;
+}
+
+.secondary {
+  margin-top: var(--space-md);
+  font-size: var(--text-small);
+  color: rgba(248, 245, 239, 0.6);
+}

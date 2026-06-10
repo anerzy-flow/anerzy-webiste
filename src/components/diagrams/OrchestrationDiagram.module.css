@@ -1,0 +1,175 @@
+.wrap {
+  width: 100%;
+}
+
+/* ---- SVG (desktop / tablet) ---- */
+.svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.line {
+  stroke: var(--diagram-line);
+  stroke-width: var(--diagram-line-width);
+  transition:
+    stroke var(--duration-fast) var(--ease-standard),
+    stroke-width var(--duration-fast) var(--ease-standard);
+}
+
+.lineActive {
+  stroke: var(--diagram-line-active);
+  stroke-width: 2.5;
+}
+
+.nodeGroup {
+  cursor: default;
+}
+
+.node {
+  fill: var(--diagram-node-bg);
+  stroke: var(--diagram-node-border);
+  stroke-width: 1;
+  transition:
+    stroke var(--duration-fast) var(--ease-standard),
+    fill var(--duration-fast) var(--ease-standard);
+}
+
+.outputNode {
+  fill: var(--color-accent-soft);
+}
+
+.nodeActive {
+  stroke: var(--color-accent);
+  stroke-width: 1.5;
+}
+
+.nodeLabel {
+  fill: var(--diagram-node-text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: var(--weight-medium);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.center {
+  fill: var(--diagram-center-bg);
+  stroke: var(--diagram-center-bg);
+}
+
+.centerEyebrow {
+  fill: var(--color-air);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-anchor: middle;
+}
+
+.centerLabel {
+  fill: var(--diagram-center-text);
+  font-family: var(--font-sans);
+  font-size: 26px;
+  font-weight: var(--weight-semibold);
+  text-anchor: middle;
+}
+
+.centerSub {
+  fill: rgba(248, 245, 239, 0.72);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+/* ---- Mobile stack ---- */
+.stack {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.stackGroup {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.stackLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2xs);
+}
+
+.chip {
+  padding: 0.5rem 0.75rem;
+  background: var(--diagram-node-bg);
+  border: 1px solid var(--diagram-node-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+}
+
+.chipOutput {
+  background: var(--color-accent-soft);
+}
+
+.stackCenter {
+  background: var(--diagram-center-bg);
+  color: var(--diagram-center-text);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.stackCenterEyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-air);
+}
+
+.stackCenterTitle {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  margin-top: var(--space-3xs);
+}
+
+.stackArrow {
+  width: 1px;
+  height: 28px;
+  background: var(--diagram-line);
+  position: relative;
+}
+
+.stackArrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid var(--diagram-line);
+  border-bottom: 1px solid var(--diagram-line);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Swap SVG for the stacked layout on small screens. */
+@media (max-width: 720px) {
+  .svg {
+    display: none;
+  }
+  .stack {
+    display: flex;
+  }
+}

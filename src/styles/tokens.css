@@ -1,0 +1,127 @@
+/*
+ * Aenerzy design tokens — the single source of truth for all visual styling.
+ *
+ * Change a value here once and it propagates everywhere:
+ *   - change --color-accent  -> all buttons, links, diagram highlights update
+ *   - change --space-section -> the whole page rhythm updates
+ *   - change --duration-*    -> all motion stays consistent
+ *
+ * A future dark mode can be added by re-declaring the semantic tokens under a
+ * [data-theme="dark"] selector — without touching any component.
+ */
+
+:root {
+  /* ---- Palette: foundation ---- */
+  --color-porcelain: #f8f5ef; /* warm porcelain — main background */
+  --color-surface: #ffffff; /* soft surface — cards / raised panels */
+  --color-border: #ddd6c8; /* fine border */
+  --color-ink: #171717; /* ink black — primary text */
+  --color-graphite: #67645e; /* muted graphite — secondary text */
+
+  /* ---- Palette: Delft influence ---- */
+  --color-delft: #1f4e8c; /* main brand / accent */
+  --color-cobalt: #12355f; /* dark technical sections, strong emphasis */
+  --color-ceramic: #eaf1f8; /* subtle Delft-inspired surfaces */
+
+  /* ---- Palette: energy elements ---- */
+  --color-fire: #f97316; /* fire saffron — heat / attention (sparingly) */
+  --color-solar: #f5b700; /* solar marigold — energy (sparingly) */
+  --color-water: #00a6d6; /* water cyan — active diagram lines / flow */
+  --color-air: #8ecdf7; /* air sky */
+
+  /* ---- Palette: decision / status (traffic-light outputs only) ---- */
+  --color-feasible: #22a06b;
+  --color-constraint: #d99400;
+  --color-blocked: #d64545;
+
+  /* ---- Semantic aliases (reference these in components) ---- */
+  --color-bg: var(--color-porcelain);
+  --color-text: var(--color-ink);
+  --color-muted: var(--color-graphite);
+  --color-accent: var(--color-delft);
+  --color-accent-strong: var(--color-cobalt);
+  --color-accent-soft: var(--color-ceramic);
+  --color-flow: var(--color-water);
+
+  /* ---- Diagram tokens ---- */
+  --diagram-node-bg: var(--color-surface);
+  --diagram-node-border: var(--color-border);
+  --diagram-node-text: var(--color-ink);
+  --diagram-line: #c9c2b4; /* resting connector — quieter than the body border */
+  --diagram-line-active: var(--color-water);
+  --diagram-center-bg: var(--color-cobalt);
+  --diagram-center-text: var(--color-porcelain);
+  --diagram-line-width: 1.5;
+
+  /* ---- Typography: families ---- */
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo,
+    Consolas, monospace;
+
+  /* ---- Typography: fluid scale (clamp: min, preferred, max) ---- */
+  --text-display: clamp(2rem, 1.4rem + 3.2vw, 4.25rem); /* hero headline */
+  --text-h1: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+  --text-h2: clamp(1.6rem, 1.3rem + 1.4vw, 2.25rem);
+  --text-h3: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
+  --text-lead: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); /* subheads / intro */
+  --text-body: 1.0625rem; /* 17px */
+  --text-small: 0.9375rem; /* 15px */
+  --text-eyebrow: 0.78rem; /* mono labels */
+
+  /* ---- Typography: weights & metrics ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.6;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.12em; /* eyebrows / mono labels */
+
+  /* ---- Spacing scale ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Section rhythm — change once to retune the whole page */
+  --space-section: clamp(72px, 9vw, 120px);
+
+  /* ---- Layout ---- */
+  --container-max: 1180px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+  --header-height: 64px;
+
+  /* ---- Border radius (max 8px per brief) ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* ---- Borders ---- */
+  --border-hairline: 1px solid var(--color-border);
+
+  /* ---- Shadows (restrained) ---- */
+  --shadow-sm: 0 1px 2px rgba(18, 53, 95, 0.04);
+  --shadow-md: 0 6px 24px -12px rgba(18, 53, 95, 0.18);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 160ms;
+  --duration-medium: 420ms;
+  --duration-slow: 900ms;
+
+  /* ---- Focus ring ---- */
+  --focus-ring: 0 0 0 3px rgba(31, 78, 140, 0.28);
+
+  /* ---- Z-index ---- */
+  --z-header: 100;
+}

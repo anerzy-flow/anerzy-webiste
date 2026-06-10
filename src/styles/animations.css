@@ -1,0 +1,42 @@
+/*
+ * Shared CSS keyframes for small, functional motion that does not need
+ * JavaScript orchestration. Scroll-reveal and diagram orchestration are
+ * handled by Motion (see src/lib/animation.ts); these are lightweight extras.
+ *
+ * All motion below is suppressed under prefers-reduced-motion.
+ */
+
+@keyframes aenerzy-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes aenerzy-flow-dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+/* Utility: gentle attention pulse for active flow markers. */
+.flow-pulse {
+  animation: aenerzy-pulse var(--duration-slow) var(--ease-standard) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-pulse {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

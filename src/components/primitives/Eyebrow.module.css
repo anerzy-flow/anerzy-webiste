@@ -1,0 +1,19 @@
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Leading tick mark — a small functional accent, not decoration. */
+.eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--color-accent);
+}

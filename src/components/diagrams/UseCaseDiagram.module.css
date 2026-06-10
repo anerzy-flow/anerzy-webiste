@@ -1,0 +1,118 @@
+.flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.stageWrap {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+}
+
+.stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.stageFinal {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-2xs);
+}
+
+.item {
+  padding: 0.45rem 0;
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.item:first-child {
+  border-top: none;
+}
+
+.outputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+}
+
+/* ---- connector (horizontal arrow on desktop) ---- */
+.connector {
+  flex: none;
+  align-self: center;
+  position: relative;
+  width: 28px;
+  height: 1px;
+  margin-inline: 2px;
+  background: var(--diagram-line);
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--diagram-line);
+  border-right: 1px solid var(--diagram-line);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* ---- vertical stack on smaller screens ---- */
+@media (max-width: 1024px) {
+  .flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stageWrap {
+    flex: none;
+  }
+  .connector {
+    align-self: center;
+    width: 1px;
+    height: 26px;
+    margin-block: 4px;
+  }
+  .connector::after {
+    right: 50%;
+    top: auto;
+    bottom: 0;
+    border-top: none;
+    border-right: 1px solid var(--diagram-line);
+    border-bottom: 1px solid var(--diagram-line);
+    transform: translateX(50%) rotate(45deg);
+  }
+  .title {
+    font-size: var(--text-h3);
+  }
+}
