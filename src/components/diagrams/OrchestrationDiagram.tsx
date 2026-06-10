@@ -272,7 +272,7 @@ function DeliverStage() {
 const STAGE_CONTENT = [AskStage, PlanStage, SelectStage, RunStage, DeliverStage];
 
 export function OrchestrationDiagram() {
-  const [stage, setStage] = useState(2);
+  const [stage, setStage] = useState(0);
   const [paused, setPaused] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
   const inView = useInView(wrapRef, { amount: 0.3 });

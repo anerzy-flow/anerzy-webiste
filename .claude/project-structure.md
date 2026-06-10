@@ -32,10 +32,11 @@ Removed sections (do not re-add): WorkflowSection, PrinciplesSection (merged int
 
 ## Hero demo — OrchestrationDiagram
 `src/components/diagrams/OrchestrationDiagram.tsx` is a **5-stage auto-playing product demo**, one stage on screen at a time:
-01 Ask (typed prompt) → 02 Plan (steps + clarifying question) → 03 Select (data/tools, one choice point) → 04 Run (progress rows) → 05 Deliver (status + decision + mini bar chart).
-- Auto-advances every 3.5 s (`STAGE_MS`), loops; clickable step rail jumps + pauses; resumes after 12 s idle (`IDLE_MS`)
+01 Ask (typed prompt) → 02 Plan (steps + clarifying question) → 03 Select (domain-grouped tool picker) → 04 Run (progress rows) → 05 Deliver (status + decision + mini bar chart).
+- Per-stage durations in `STAGES[].ms` (Select holds longest); loops; clickable step rail jumps + pauses; resumes after 12 s idle (`IDLE_MS`)
 - Pauses off-screen (`useInView`); `prefers-reduced-motion` → click-only
 - Stage transitions via `AnimatePresence mode="wait"`; demo copy lives in the component (not siteContent)
+- **Select stage uses real tool names** from the product vision: Vesta MAIS / Hestia (heat), pandapower / PyPSA (electricity), plus BAG / DSO / 3D-city-model data feeds. Monogram badges stand in for logos — swap the badge `<span>` for an `<img>` when official brand assets are available (and permission is cleared).
 
 ## File layout
 ```
